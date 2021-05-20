@@ -10,7 +10,7 @@ public class Runner {
         String ch="";
         
             do{
-                System.out.println("Enter the operation you need to perform:\n1. append\n2.insertAtBeginning\n3. Insert At Position");
+                System.out.println("Enter the operation you need to perform:\n1. append\n2.insertAtBeginning\n3. Insert At Position\n4. Insert at Middle");
                 int choice=sc.nextInt();
 
                 if(choice==1){
@@ -48,14 +48,23 @@ public class Runner {
                     list.insertAtPos(pos, val);
                     list.show();
                 }
+                else if(choice==4){
+                    System.out.println("Enter the value:");
+                    int val=sc.nextInt();
+
+                    list.insertAtMid(val);
+
+                    list.show();
+                }
                 
                 System.out.println();
                 System.out.println("Do you want to continue?[Y/N]");
                 ch=sc.next();
-                sc.close();
+                
                 
         }while(ch.equalsIgnoreCase("Y"));
 
+        sc.close();
         
     }
 
