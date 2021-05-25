@@ -103,6 +103,50 @@ public class LinkedList{
 
     }
 
-    
+    public void sort(){
+
+        Node n=head,index=null;
+
+        int temp;
+
+        while(n!=null){
+
+            index=n.next;
+
+            while(index!=null){
+
+                if(n.data>index.data){
+                    temp=n.data;
+                    n.data=index.data;
+                    index.data=temp;
+                }
+
+                index=index.next;
+
+            }
+
+            n=n.next;
+
+        }
+
+    }
+
+    public void getMiddle(){
+
+        Node fast_ptr=head;
+        Node slow_ptr=head;
+
+        if(head!=null){
+
+            while(fast_ptr!=null && fast_ptr.next!=null){
+                slow_ptr=slow_ptr.next;
+                fast_ptr=fast_ptr.next.next;
+            }
+
+            System.out.println("The middle element is "+slow_ptr.data+".");
+
+        }
+
+    }
 
 }
