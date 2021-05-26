@@ -151,28 +151,17 @@ public class LinkedList{
 
     public void smallestEle(){
 
-        Node n=head,ind=null;
+        Node n=head;
 
-        int min=n.data;
+        int min=Integer.MAX_VALUE;
 
-        if(head!=null){
+        while(n!=null){
 
-            while(n != null){
-
-                ind=n.next;
-
-                while(ind != null){
-
-                    if(ind.data<min){
-                        min=ind.data;
-                    }
-
-                    ind=ind.next;
-
-                }
-
-                n=n.next;
+            if(min>n.data){
+                min=n.data;
             }
+
+            n=n.next;
 
         }
 
@@ -182,22 +171,14 @@ public class LinkedList{
 
     public void getMax(){
 
-        Node n=head,ind=null;
+        Node n=head;
 
-        int max=n.data;
+        int max=Integer.MIN_VALUE;
 
-        while(n != null){
+        while(n!=null){
 
-            ind=n.next;
-
-            while(ind != null){
-
-                if(ind.data>max){
-                    max=ind.data;
-                }
-
-                ind=ind.next;
-
+            if(max<n.data){
+                max=n.data;
             }
 
             n=n.next;
@@ -205,6 +186,18 @@ public class LinkedList{
         }
 
         System.out.println("The maximum element is "+max+".");
+        
+    }
+
+    public void deletePos(int pos){
+
+        Node n=head;
+
+        for(int i=0;i<pos;i++){
+            n=n.next;
+        }
+
+        n.next=n.next.next;
         
     }
 
