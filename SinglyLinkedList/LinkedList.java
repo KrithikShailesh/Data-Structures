@@ -153,7 +153,7 @@ public class LinkedList{
 
         Node n=head;
 
-        int min=Integer.MAX_VALUE;
+        int min=n.data;
 
         while(n!=null){
 
@@ -173,7 +173,7 @@ public class LinkedList{
 
         Node n=head;
 
-        int max=Integer.MIN_VALUE;
+        int max=n.data;
 
         while(n!=null){
 
@@ -198,7 +198,7 @@ public class LinkedList{
         }
 
         n.next=n.next.next;
-        
+
     }
 
 }
