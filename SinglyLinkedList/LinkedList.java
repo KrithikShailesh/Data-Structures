@@ -149,4 +149,35 @@ public class LinkedList{
 
     }
 
+    public void smallestEle(){
+
+        Node n=head,ind=null;
+
+        int min=n.data;
+
+        if(head!=null){
+
+            while(n != null){
+
+                ind=n.next;
+
+                while(ind != null){
+
+                    if(ind.data<min){
+                        min=ind.data;
+                    }
+
+                    ind=ind.next;
+
+                }
+
+                n=n.next;
+            }
+
+        }
+
+        System.out.println("The minimum element is "+min+".");
+
+    }
+
 }
