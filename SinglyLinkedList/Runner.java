@@ -10,7 +10,7 @@ public class Runner {
         String ch="";
         
             do{
-                System.out.println("Enter the operation you need to perform:\n1. Append\n2. Insert At Beginning\n3. Insert At Position\n4. Insert at Middle\n5. Sort\n6. Get the Middle Element\n7. Get the Smallest Element");
+                System.out.println("Enter the operation you need to perform:\n1. Append\n2. Insert At Beginning\n3. Insert At Position\n4. Insert at Middle\n5. Sort\n6. Get the Middle Element\n7. Get the Smallest Element\n8. Get the Maximum Element");
                 int choice=sc.nextInt();
 
                 if(choice==1){
@@ -80,7 +80,12 @@ public class Runner {
                 else if(choice == 7){
 
                     list.smallestEle();
-                    
+
+                }
+                else if(choice == 8){
+
+                    list.getMax();
+
                 }
                 System.out.println();
                 System.out.println("Do you want to continue?[Y/N]");

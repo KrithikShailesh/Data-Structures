@@ -180,4 +180,32 @@ public class LinkedList{
 
     }
 
+    public void getMax(){
+
+        Node n=head,ind=null;
+
+        int max=n.data;
+
+        while(n != null){
+
+            ind=n.next;
+
+            while(ind != null){
+
+                if(ind.data>max){
+                    max=ind.data;
+                }
+
+                ind=ind.next;
+
+            }
+
+            n=n.next;
+
+        }
+
+        System.out.println("The maximum element is "+max+".");
+        
+    }
+
 }
